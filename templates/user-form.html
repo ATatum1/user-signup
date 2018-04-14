@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+    {% block content %}
+    
+
+    <!-- create your form here -->
+    <form method="post">
+            
+        <label for="user_name">Username</label>
+            <input name="user_name" type="text" value="{{user_name}}"/>  
+        </label>   
+        <span class="error">{{username_error}}</span>
+        <br>
+        <br>
+              
+        <label for="pass_word">Password</label>
+            <input name="pass_word" type="password" value="{{pass_word}}" />
+        </label>
+        <span class="error">{{password_error}}</span>
+        <br>
+        <br>
+           
+        <label for="ver_psw">Verify Password</label> 
+            <input name="ver_psw" type="password" value="{{ver_psw}}" />
+        </label>
+        <span class="error">{{verpsw_error}}</span>
+
+        <br>
+        <br>
+            
+        <label for="email">Email (optional)</label>
+            <input name="email" type="text" value="{{email}}" />
+        </label>
+        <span class="error">{{email_error}}</span>
+
+        <br>
+        <br>
+            
+        <input type="submit" value="Submit"/>
+    </form>
+        
+{% endblock %}   
